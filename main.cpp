@@ -356,6 +356,7 @@ void playGame() {
             while(best_overall_guesses.size() > BEST_GUESS_PRINT_AMOUNT) {
                 best_overall_guesses.pop_back();
             }
+            best_possible_guesses = best_overall_guesses;
         }
 
         std::cout << std::setiosflags(std::ios::left | std::ios::fixed);
