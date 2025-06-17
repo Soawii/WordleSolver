@@ -1,20 +1,26 @@
 # WordleSolver
-Solves the daily wordle puzzle
-## Functionality
+A C++ program that solves the daily Wordle puzzle.
+# Build
 1. Clone the repository
-2. Go into the repository folder and build using cmake  
-   ```
+2. Go into the repository folder and build using cmake
+   
+   ```bash
    cd WordleSolver
    mkdir build
    cd build
    cmake ..
    make
    ```
-3. Run the resulting file  
-   ```
+3. Run the resulting file
+   
+   ```bash
    ./WordleSolver
    ```
-4. Follow the instructions in the terminal  
-   "Enter your guess word" -> enter the chosen from the list (or not) word without any spaces.  
-   "Enter guess result" -> enter the resulting combination of GREEN(2), YELLOW(1) and GRAY(0) tiles.  
-     Example: you guess the word "tares" while the answer is "apple", resulting in GRAY,YELLOW,GRAY,YELLOW,GRAY -> you have to enter 01010  
+4. Follow the instructions in the terminal
+   
+   | Command | What to enter | Example | 
+   | :---: | :---: | :---: |
+   | Enter your guess word | Enter the chosen word without any spaces | apple |
+   | Enter guess result | Enter the resulting combination of GREEN(2), YELLOW(1) and GRAY(0) tiles | 01020 - meaning GRAY,YELLOW,GRAY,GREEN,GRAY |
+
+
