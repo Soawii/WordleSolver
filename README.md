@@ -23,4 +23,10 @@ A C++ program that solves the daily Wordle puzzle.
    | Enter your guess word | Enter the chosen word without any spaces | apple |
    | Enter guess result | Enter the resulting combination of GREEN(2), YELLOW(1) and GRAY(0) tiles | 01020 - meaning GRAY,YELLOW,GRAY,GREEN,GRAY |
 
+5. Ways to run the program  
+   | Command | What is does | 
+   | :---: | :---: |
+   | `./WordleSolver` | Default way that plays wordle |
+   | `./WordleSolver -sim` | Runs the wordle simulation on all the possible answers, outputs the statistics |
+   
 
