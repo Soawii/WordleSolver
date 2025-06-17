@@ -8,8 +8,13 @@ set(CMAKE_CXX_COMPILER "g++")
 
 add_executable(WordleSolver main.cpp)
 
-target_compile_options(${PROJECT_NAME} PRIVATE -O3 -fopenmp -march=native)
-target_link_options(${PROJECT_NAME} PRIVATE -fopenmp)
+if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+    target_compile_options(${PROJECT_NAME} PRIVATE -O3 -fopenmp -march=native)
+    target_link_options(${PROJECT_NAME} PRIVATE -fopenmp)
+elseif(CMAKE_SYSTEM_NAME STREQUAL "Windows")
+    target_compile_options(${PROJECT_NAME} PRIVATE /O3 /openmp)
+    target_link_options(${PROJECT_NAME} PRIVATE /openmp)
+endif()
 
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
