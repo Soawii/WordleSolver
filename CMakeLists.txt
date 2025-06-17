@@ -19,12 +19,12 @@ add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
 
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
-            ${CMAKE_SOURCE_DIR}/best_first_guess.txt
-            $<TARGET_FILE_DIR:${PROJECT_NAME}>/best_first_guess.txt
+            ${CMAKE_SOURCE_DIR}/answer_words.txt
+            $<TARGET_FILE_DIR:${PROJECT_NAME}>/answer_words.txt
 )
 
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
-            ${CMAKE_SOURCE_DIR}/answer_words.txt
-            $<TARGET_FILE_DIR:${PROJECT_NAME}>/answer_words.txt
+            ${CMAKE_SOURCE_DIR}/word_frequency.txt
+            $<TARGET_FILE_DIR:${PROJECT_NAME}>/word_frequency.txt
 )
